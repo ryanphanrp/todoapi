@@ -84,8 +84,7 @@ module.exports.createTask = (req, res) => {
                     console.log(error);
                     res.status(500).json({
                         success: false,
-                        message: 'Server Error!',
-                        error: error.message
+                        message: `Server Error! ${error.message}`,
                     });
                 });
         })
@@ -110,8 +109,7 @@ module.exports.updateTask = (req, res) => {
             console.log(error);
             res.status(500).json({
                 success: false,
-                message: 'Server Error!',
-                error: error.message
+                message: `Server Error! ${error.message}`,
             });
         });
 }
@@ -135,8 +133,7 @@ module.exports.updateStatus = (req, res) => {
             console.log(error);
             res.status(500).json({
                 success: false,
-                message: 'Server Error!',
-                error: error.message
+                message: `Server Error! ${error.message}`,
             });
         });
 }
@@ -158,8 +155,7 @@ module.exports.deleteTask = (req, res) => {
             console.log(error);
             res.status(500).json({
                 success: false,
-                message: 'Server Error!',
-                error: error.message
+                message: `Server Error! ${error.message}`,
             });
         });
 }
